@@ -5,7 +5,7 @@ export const TipSelector = () => {
     <fieldset>
       <legend>Select Tip %</legend>
       {[5, 10, 15, 25, 50].map((tip) => (
-        <label>
+        <label key={tip}>
           <SROnly>tip:</SROnly> {tip}%{" "}
           <input type="radio" name="tip" value={tip} className="sr-only" />
         </label>

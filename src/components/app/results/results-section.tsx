@@ -6,8 +6,10 @@ export const ResultSection = () => {
   return (
     <Section>
       <Heading className="sr-only">Bellow are your results</Heading>
-      <ResultPreview />
-      <ResultPreview />
+      <dl>
+        <ResultPreview />
+        <ResultPreview />
+      </dl>
       <button type="reset">
         Reset <Icon name="arrow-counterclockwise" />
       </button>
