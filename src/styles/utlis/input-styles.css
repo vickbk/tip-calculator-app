@@ -1,0 +1,10 @@
+.tip-label {
+  @apply p-2 text-2xl rounded-lg cursor-pointer;
+
+  background-color: hsl(var(--green-900));
+  color: hsl(var(--white));
+  &:has(input:checked) {
+    background-color: hsl(var(--green-400));
+    color: hsl(var(--green-900));
+  }
+}

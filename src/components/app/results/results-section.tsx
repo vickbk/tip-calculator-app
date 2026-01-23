@@ -17,8 +17,9 @@ export const ResultSection = ({
         <ResultPreview name="Total" value={total} />
       </dl>
       <button
-        className="uppercase green-400 c-green-900 text-xl p-4 rounded-lg mt-auto active-grey-200 active-c-green-900"
+        className="green-400 c-green-900 uppercase text-xl p-4 rounded-lg mt-auto active-grey-200 active-c-green-900"
         type="reset"
+        style={{ "--bg-accent": !touched ? 0.1 : 1 } as React.CSSProperties}
         disabled={!touched}
       >
         Reset <Icon name="arrow-counterclockwise" />
