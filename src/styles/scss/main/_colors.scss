@@ -18,8 +18,8 @@ $colorsMap: (
 );
 
 $primary-color: map.get($colorsMap, grey-200);
-$link-color: map.get($colorsMap, grey-500);
-$text-color: map.get($colorsMap, green-900);
+$link-color: map.get($colorsMap, green-900);
+$text-color: map.get($colorsMap, grey-500);
 $accent-color: map.get($colorsMap, green-400);
 
 $exluded-variables: background foreground secondary;
