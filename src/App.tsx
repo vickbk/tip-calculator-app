@@ -1,16 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import logo from "@/assets/logo.svg";
 import "@/styles/global.css";
 import "@/styles/scss/global.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { ColorsHelper } from "./components/shared/ColorsHelper";
+import { Heading, Main } from "./components/shared/heading-managers";
+import { HeadingCtx } from "./contexts/HeadingCtx";
 
 function App() {
   return (
-    <>
-      <ColorsHelper />
-    </>
+    <HeadingCtx value={0}>
+      <header>
+        <img src={logo} alt="" />
+        <Heading className="sr-only">Tip Calculator App</Heading>
+      </header>
+      <Main pageHasH1>the Calculator will be here</Main>
+    </HeadingCtx>
   );
 }
 
