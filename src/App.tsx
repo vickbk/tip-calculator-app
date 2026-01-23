@@ -9,7 +9,7 @@ import { HeadingCtx } from "./contexts/HeadingCtx";
 function App() {
   return (
     <HeadingCtx value={0}>
-      <header>
+      <header className="mt-12">
         <img src={logo} alt="" />
         <Heading className="sr-only">Tip Calculator App</Heading>
       </header>
