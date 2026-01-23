@@ -14,7 +14,7 @@ export const TipSelector = () => {
             type="radio"
             name="tip"
             value={tip}
-            className="sr-onlys"
+            className="sr-only"
             checked={checked === tip}
             onChange={({ target }) => {
               if (target.checked) setChecked(tip);

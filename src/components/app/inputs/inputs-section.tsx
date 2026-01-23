@@ -6,9 +6,13 @@ export const InputSection = () => {
   return (
     <Section>
       <Heading className="sr-only">Enter your bills information</Heading>
-      <LabelledInput />
+      <LabelledInput label="Bill" icon="currency-dollar" name="bill" />
       <TipSelector />
-      <LabelledInput />
+      <LabelledInput
+        label="Number of People"
+        icon="person-fill"
+        name="people"
+      />
     </Section>
   );
 };
