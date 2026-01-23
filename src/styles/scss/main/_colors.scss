@@ -5,25 +5,22 @@
 
 $colorsMap: (
   // primary
-  neutral-900: 0 0% 7%,
-  neutral-800: 0 0% 15%,
-  neutral-500: 240 3% 46%,
-  neutral-400: 240 1% 59%,
-  neutral-0: 0 0% 100%,
-  blue-600: 214 100% 55%,
-  blue-400: 210 100% 65%,
-  red-500: 354 63% 57%,
-  green-500: 140 63% 57%,
-  yellow-400: 49 85% 70%,
+  green-400: 172 67% 45%,
+  green-900: 183 100% 15%,
+  grey-500: 186 14% 43%,
+  grey-400: 184 14% 56%,
+  grey-200: 185 41% 84%,
+  grey-50: 189 47% 97%,
+  white: 0 100% 100%,
   background: var(--background),
   foreground: var(--foreground),
   secondary: var(--secondary)
 );
 
-$primary-color: map.get($colorsMap, neutral-0);
-$link-color: map.get($colorsMap, blue-600);
-$text-color: map.get($colorsMap, neutral-900);
-$accent-color: map.get($colorsMap, blue-600);
+$primary-color: map.get($colorsMap, white);
+$link-color: map.get($colorsMap, grey-500);
+$text-color: map.get($colorsMap, green-900);
+$accent-color: map.get($colorsMap, green-400);
 
 $exluded-variables: background foreground secondary;
 
@@ -42,23 +39,23 @@ $exluded-variables: background foreground secondary;
   --secondary: var(--neutral-500);
 
   @media (prefers-color-scheme: dark) {
-    --background: #{$text-color};
-    --foreground: #{$primary-color};
-    --secondary: var(--neutral-500);
+    // --background: #{$text-color};
+    // --foreground: #{$primary-color};
+    // --secondary: var(--neutral-500);
   }
   &[theme="dark"],
   *[theme="dark"] {
-    --background: #{$text-color};
-    --foreground: #{$primary-color};
-    --secondary: var(--neutral-400);
+    // --background: #{$text-color};
+    // --foreground: #{$primary-color};
+    // --secondary: var(--neutral-400);
   }
   &[theme="light"],
   *[theme="light"] {
-    --background: #{$primary-color};
-    --foreground: #{$text-color};
-    --accent-color: #{$accent-color};
-    --link-color: #{$link-color};
-    --secondary: var(--neutral-500);
+    // --background: #{$primary-color};
+    // --foreground: #{$text-color};
+    // --accent-color: #{$accent-color};
+    // --link-color: #{$link-color};
+    // --secondary: var(--neutral-500);
   }
   --outstand: var(--element-bg);
 }
