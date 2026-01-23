@@ -5,10 +5,13 @@ const TIPS = [5, 10, 15, 25, 50];
 export const TipSelector = () => {
   const [checked, setChecked] = useState<number | null>(null);
   return (
-    <fieldset>
-      <legend>Select Tip %</legend>
+    <fieldset className="grid grid-cols-2 gap-4 text-center">
+      <legend className="mb-4 text-left">Select Tip %</legend>
       {TIPS.map((tip) => (
-        <label key={tip}>
+        <label
+          className="green-900 c-white p-2 pointer text-2xl rounded-lg cursor-pointer"
+          key={tip}
+        >
           <SROnly>tip:</SROnly> {tip}%{" "}
           <input
             type="radio"
@@ -22,15 +25,14 @@ export const TipSelector = () => {
           />
         </label>
       ))}
-      <label>
-        <SROnly>Custom type</SROnly>{" "}
-        <input
-          type="number"
-          name="tip"
-          placeholder="Custom"
-          onFocus={() => setChecked(null)}
-        />
-      </label>
+      <input
+        className="grey-50 rounded-lg p-2 px-4 text-2xl text-right"
+        aria-label="Custom tip"
+        type="number"
+        name="tip"
+        placeholder="Custom"
+        onFocus={() => setChecked(null)}
+      />
     </fieldset>
   );
 };

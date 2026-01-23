@@ -4,7 +4,7 @@ import { TipSelector } from "./tip-selector";
 
 export const InputSection = () => {
   return (
-    <Section>
+    <Section className="grid gap-8">
       <Heading className="sr-only">Enter your bills information</Heading>
       <LabelledInput label="Bill" icon="currency-dollar" name="bill" />
       <TipSelector />
