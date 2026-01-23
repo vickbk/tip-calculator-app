@@ -1,3 +1,4 @@
+import { calculateTip } from "@/libs/calculate-tip";
 import { useState } from "react";
 import { Heading } from "../shared/heading-managers";
 import { InputSection } from "./inputs/inputs-section";
@@ -10,16 +11,21 @@ export const SplitCalculator = () => {
 
   function splitBill({ currentTarget }: React.FormEvent<HTMLFormElement>) {
     const formData = new FormData(currentTarget);
+
     setTouched([...formData].some(([, value]) => value !== ""));
+
     const { tip, bill, custom, people } = Object.fromEntries(
       formData,
     ) as Record<"tip" | "bill" | "custom" | "people", string>;
-    if (+people === 0) return setResults({ tip: 0, total: 0 });
-    const tipToUse = +tip || +custom;
-    const personTip = ((+bill / +people) * tipToUse) / 100;
-    const personTotal = +bill / +people + personTip;
 
-    return setResults({ tip: personTip, total: personTotal });
+    setResults(
+      calculateTip({
+        tip: +tip,
+        bill: +bill,
+        custom: +custom,
+        people: +people,
+      }),
+    );
   }
   return (
     <form
