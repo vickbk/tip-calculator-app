@@ -10,7 +10,7 @@ export const LabelledInput = ({
       {label}
       <Icon name={icon + " absolute text-2xl bottom-4 left-4 c-grey-400"} />
       <input
-        className="grey-50 p-4 text-right rounded-lg text-2xl c-green-900"
+        className="grey-50 p-4 text-right rounded-lg text-2xl c-green-900 active-out-green-400 hover:outline-2"
         type="number"
         name={name}
         placeholder="0"

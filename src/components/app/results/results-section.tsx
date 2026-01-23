@@ -17,7 +17,7 @@ export const ResultSection = ({
         <ResultPreview name="Total" value={total} />
       </dl>
       <button
-        className="uppercase green-400 c-green-900 text-xl p-4 rounded-lg mt-auto"
+        className="uppercase green-400 c-green-900 text-xl p-4 rounded-lg mt-auto active-grey-200 active-c-green-900"
         type="reset"
         disabled={!touched}
       >
