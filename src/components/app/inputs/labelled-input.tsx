@@ -1,3 +1,10 @@
+import { Icon } from "@/components/common/bi-icon";
+
 export const LabelledInput = () => {
-  return <div>LabelledInput</div>;
+  return (
+    <label>
+      label <Icon name="currency-dollar" />
+      <input type="number" name="name" placeholder="0" />
+    </label>
+  );
 };
