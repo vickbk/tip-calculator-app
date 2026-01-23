@@ -7,8 +7,8 @@ export const ResultSection = () => {
     <Section>
       <Heading className="sr-only">Bellow are your results</Heading>
       <dl>
-        <ResultPreview />
-        <ResultPreview />
+        <ResultPreview name="Tip Amount" value={0} />
+        <ResultPreview name="Total" value={0} />
       </dl>
       <button type="reset">
         Reset <Icon name="arrow-counterclockwise" />

@@ -1,10 +1,16 @@
-export const ResultPreview = () => {
+export const ResultPreview = ({
+  name,
+  value,
+}: {
+  name: string;
+  value: number;
+}) => {
   return (
     <>
       <dt>
-        Tip Amount <span>/ person</span>
+        {name} <span>/ person</span>
       </dt>
-      <dd>$0.00</dd>
+      <dd>${value}</dd>
     </>
   );
 };
