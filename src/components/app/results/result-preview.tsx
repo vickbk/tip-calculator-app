@@ -10,7 +10,7 @@ export const ResultPreview = ({
       <dt>
         {name} <span>/ person</span>
       </dt>
-      <dd>${value}</dd>
+      <dd>${value.toFixed(2)}</dd>
     </>
   );
 };
