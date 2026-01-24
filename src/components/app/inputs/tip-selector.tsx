@@ -6,7 +6,7 @@ export const TipSelector = () => {
   const [checked, setChecked] = useState<number | null>(null);
   const [custom, setCustom] = useState("");
   return (
-    <fieldset className="grid grid-cols-2 gap-4 text-center">
+    <fieldset className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
       <legend className="mb-4 text-left">Select Tip %</legend>
       {TIPS.map((tip) => (
         <label
@@ -30,7 +30,7 @@ export const TipSelector = () => {
         </label>
       ))}
       <input
-        className="grey-50 rounded-lg p-2 px-4 text-2xl text-right active-out-green-400 hover:outline-2 focus:outline-2"
+        className="grey-50 rounded-lg p-2 px-4 text-2xl sm:text-xl text-right active-out-green-400 hover:outline-2 focus:outline-2"
         aria-label="Custom tip"
         type="number"
         placeholder="Custom"
