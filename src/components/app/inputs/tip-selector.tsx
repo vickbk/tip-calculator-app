@@ -13,7 +13,7 @@ export const TipSelector = () => {
           className="tip-label  active-grey-200 active-c-green-900"
           key={tip}
         >
-          <SROnly>tip:</SROnly> {tip}%{" "}
+          <SROnly>tip:</SROnly> {tip}%
           <input
             type="radio"
             name="tip"
